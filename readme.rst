@@ -1,29 +1,20 @@
 ###################
-What is CodeIgniter
+About this Project
 ###################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+This project is used to fetch tweets from Twitter having:
+* A particular hashtag
+* Re-tweeted at least once
 
-*******************
-Release Information
-*******************
-
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<http://www.codeigniter.com/download>`_ page.
-
-**************************
-Changelog and New Features
-**************************
-
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+*********
+Features
+*********
+* Setup using the latest version of CodeIgniter v3.0.0
+* Uses TwitterOAuth - most popular PHP library for Twitter's OAuth REST API. See documentation
+ at `https://twitteroauth.com<https://twitteroauth.com>`_.
+* Configurable scipt
+* Easy to extend
+* Uses Bootstrap and Fontawesome
 
 *******************
 Server Requirements
@@ -39,14 +30,24 @@ issues, as well as missing features.
 Installation
 ************
 
-Please see the `installation section <http://www.codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+* Install Composer
+    ```
+     curl -sS https://getcomposer.org/installer | php
+     mv composer.phar /usr/local/bin/composer
+    ```
+* Clone or Download the Source Code Zip.
+* Extract and Point Document Root to `twitter`
+* Run `php composer.phar install` / `composer install` in `twitter` directory
+* Add Twitter API credentials  in ``application/config/twitter.php``
+* Run your PHP server with default config
+* Open browser and navigate to localhost/twitter
+* All the tweets will be displayed
 
 *******
 License
 *******
 
-Please see the `license
+* CodeIgniter Licenese: Please see the `license
 agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
 
 *********
@@ -58,12 +59,11 @@ Resources
 -  `Community Forums <http://forum.codeigniter.com/>`_
 -  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
 -  `Community IRC <http://www.codeigniter.com/irc>`_
+-  `TwitterOAuth<https://twitteroauth.com>`_
+-  `Bootstrap<http://getbootstrap.com/getting-started/>`_
+-  `FontAwesome<http://fortawesome.github.io/Font-Awesome/get-started/>`_
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+*************
+Contributers
+*************
+0. Charanjit Singh
